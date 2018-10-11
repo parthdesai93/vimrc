@@ -154,10 +154,17 @@ let g:go_fmt_command = "goimports"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Prettier
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:prettier#autoformat = 0
+let g:prettier#config#trailing_comma = 'none'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
-\   'javascript': ['jshint'],
+\   'javascript': ['prettier'],
 \   'python': ['flake8'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
