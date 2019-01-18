@@ -185,6 +185,9 @@ let g:prettier#config#bracket_spacing = 'true'
 " Prettier default: false
 let g:prettier#config#jsx_bracket_same_line = 'false'
 
+let g:prettier#config#parser = 'babylon'
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic (syntax checker)
